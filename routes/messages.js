@@ -7,6 +7,6 @@ messageRouter.get('/:id', messagesController.getOneMessage);
 messageRouter.post('/', messagesController.createMessage);
 messageRouter.put('/:id', messagesController.updateMessage);
 messageRouter.delete('/:id', messagesController.deleteMessage);
-messageRouter.get('/user/:name', messagesController.getMessagesByUser);
+//messageRouter.get('/user/:name', messagesController.getMessagesByUser);
 
 module.exports = messageRouter;

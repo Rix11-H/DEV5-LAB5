@@ -1,12 +1,12 @@
-const Message = require('./../models/message');
+//const Message = require('./../models/message');
 
 //get all messages
 const getAllMessages = (req, res) => {
-    const response = {
-        "status": "success",
-        "data": "Getting all messages"
-    }
-    res.json(response);
+        res.json({
+            "status": "success",
+            "data": "Getting all messages"
+
+        });
 };
 
 // get one message by id
