@@ -8,7 +8,7 @@ const getAllMessages = (req, res) => {
                         "status": "success",
                         "message": `Messages from ${req.query.sender} retrieved successfully`,
                         "data": {
-                            "messages": "This would be a message"
+                            "messages": messages
                         }
                     });
                 }
@@ -20,7 +20,7 @@ const getAllMessages = (req, res) => {
                         "status": "success",
                         "message": "All messages retrieved successfully",
                         "data": {
-                            "messages": "This would be a message"
+                            "messages": messages
                         }
                     });
                 }
@@ -40,7 +40,7 @@ const createMessage = (req, res) => {
                 "status": "error",
                 "message": "Message not saved",
                 "data": {
-                    "message": "This would be a message"
+                    "message": message
                 }
             });
         }
@@ -50,7 +50,7 @@ const createMessage = (req, res) => {
                 "status": "success",
                 "message": "Message is created",
                 "data": {
-                    "message": "This would be a message"
+                    "message": message
                 }
             });
         }
@@ -64,7 +64,7 @@ const getMessageById = (req, res) => {
                 "status": "success",
                 "message": `Getting message with id = ${req.params.id}`,
                 "data": {
-                    "message": "This would be a message"
+                    "message": message
                 }
             });
         }
@@ -85,7 +85,7 @@ const updateMessage = (req, res) => {
             "status": "success",
             "message": `Message with id = ${messageId} is updated`,
             "data": {
-                "message": "This would be a message"
+                "message": message
             }
         });
     }).catch(err => {
@@ -102,7 +102,7 @@ const deleteMessage = (req, res) => {
             "status": "success",
             "message": `Message with id = ${messageId} is deleted`,
             "data": {
-                "message": "This would be a message"
+                "message": message
             }
         });
     }).catch(err => {

@@ -9,7 +9,7 @@ const usersRouter = require('./routes/users');
 const messagesRouter = require('./routes/api/v1/messages');
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/myChat', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb+srv://Rix11:a9hQkh0DxDUeu8sK@cluster-chat.fmh8jf6.mongodb.net/?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
 
 
 const app = express();
