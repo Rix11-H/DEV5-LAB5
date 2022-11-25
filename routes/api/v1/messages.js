@@ -1,22 +1,9 @@
 const express = require('express');
 const router = express.Router();
+const messagesController = require('../../../controllers/api/v1/messages');
 
-router.get('/', (req, res) => {
-    res.json({
-        "status": "success",
-        "data": {
-            "messages": []
-        }
-    })
-});
+router.get('/', messagesController.getAllMessages);
 
-router.post("/", (req, res) => {
-    res.json({
-        "status": "success",
-        "data": {
-            "message": "Message received"
-        }
-    });
-});
+router.post("/", messagesController.createMessage);
 
 module.exports = router;
