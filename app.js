@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const cors = require('cors');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -13,6 +14,12 @@ mongoose.connect('mongodb://localhost:27017/myChat', {useNewUrlParser: true, use
 
 
 const app = express();
+
+app.use(cors({
+  origin: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'UPDATE'],
+  credentials: true
+}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
